@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+    <ul>
+        {% for x in mymembers %}
+            <li> {{ x.firstname }} {{ x.lastname }}</li>
+        {% endfor %}
+    </ul>
+
+    {% with greetings=1 %}
+        {% if greetings == 1 %}
+            <h2>Hello!!</h2>
+        {% else %}
+            <h2>Bye!!</h2>    
+        {% endif %}    
+    {% endwith %}
+</body>
+
+</html>
